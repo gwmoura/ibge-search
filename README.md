@@ -13,17 +13,17 @@ Test and run
 
 To test app run this commands:
 
-* Runing with jruby
+Runing with jruby
 
-** 1 - `jruby -S bundle install`
+1. `jruby -S bundle install`
 
-** 2 - `jruby -S main.rb`
+2. `jruby -S main.rb`
 
-* Runing with just ruby
+Runing with just ruby
 
-** 1 - `bundle install`
+1. `bundle install`
 
-** 2 - `ruby main.rb` 
+2. `ruby main.rb` 
 
 Deploy on tomcat
 ================
