@@ -14,11 +14,8 @@ class IBGEParser
     content = []
     if div.length > 0
       trs = div.css("tr")
-      puts trs
       trs.each do |tr|
         td = tr.css('td')
-        puts td
-        puts "====================================="
         content.push(
           {
             "codigo_uf"=>td[0].content,
