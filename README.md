@@ -8,12 +8,22 @@ send a `GET` http request to `/city_name` or `/init_city_name` ex: `/salvador` o
 
 Obs: Send request without special character. 
 
-Run
-===
+Test and run
+============
 
-To test app run this command `jruby -S main.rb`
+To test app run this commands:
 
-Deploy tomcat
-=============
+* Runing with jruby
+
+1 - `jruby -S bundle install`
+2 - `jruby -S main.rb`
+
+* Runing with just ruby
+
+1 - `bundle install`
+2 - `ruby main.rb` 
+
+Deploy on tomcat
+================
 
 this command create the .war file to deploy on tomcat `jruby -S warble`
