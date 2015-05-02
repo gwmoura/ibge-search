@@ -1,6 +1,12 @@
 # ibge-search
 Web service to search informations about brazilian cities
 
+How to use
+==========
+
+send a `GET` http request to `/city_name` or `/init_city_name` ex: `/salvador` or `/sal`, the app return a json data with cities and your informations.
+
+Obs: Send request without special character. 
 
 Run
 ===
