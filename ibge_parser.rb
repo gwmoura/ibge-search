@@ -18,9 +18,9 @@ class IBGEParser
         td = tr.css('td')
         content.push(
           {
-            "codigo_uf"=>td[0].content,
+            "codigo_uf"=>td[0].content.to_i,
             "uf"=>td[1].content,
-            "codigo_municipio"=>td[2].content,
+            "codigo_municipio"=>td[2].content.to_i,
             "municipio"=>td[3].content,
             "area"=>td[4].content
           }
