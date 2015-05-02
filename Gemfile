@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'warble'
+gem 'warbler'
 gem 'sinatra'
 gem 'nokogiri'
 gem 'json'
