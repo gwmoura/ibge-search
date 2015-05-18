@@ -2,6 +2,8 @@ require 'open-uri'
 require 'nokogiri'
 
 class IBGEParser
+
+  attr_accessor :proxy_host, :proxy_port
   
   def get_city_info(city)
     url = "http://www.ibge.gov.br/home/geociencias/areaterritorial/area.php?nome="+city
@@ -9,7 +11,12 @@ class IBGEParser
   end
 
   def parser(url)
-    html = Nokogiri::HTML(open(url))
+    if !@proxy_host.nil?
+      html = Nokogiri::HTML(open(url, :proxy => "http://"+@proxy_host+":"+@proxy_port.to_s ))
+    else
+      html = Nokogiri::HTML(open(url))
+    end
+    
     div = html.css('div[@id="miolo_interno"]')
     content = []
     if div.length > 0
